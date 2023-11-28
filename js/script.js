@@ -85,7 +85,7 @@ function displayPurchases() {
     purchasesList.innerHTML = '';
 each(purchasedBooks,function(book, index) {
         const purchaseItem = document.createElement('li');
-        purchaseItem.innerHTML = `<span>${book.title}</span> - <span>${book.price}</span> <button onclick="removeBook(${index})">Remove</button>`;
+        purchaseItem.innerHTML = `<div>${book.title}</div> - <div>${book.price}</div> <button onclick="removeBook(${index})">Remove</button>`;
         purchasesList.appendChild(purchaseItem);
     });
 }
