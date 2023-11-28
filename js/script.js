@@ -6,14 +6,17 @@ const books = [
     { title: 'STAR WARS',image:'images/star_wars.jpg', description:'A long time ago in a galaxy far, far away . . . The release of George Lucas Star Wars in 1977 launched an epic saga that has changed how we view science fiction. Experience the wonder and magic of the Star Wars universe with The Star Wars Trilogy,a collection of the first three Star Wars novels and a collective exercise in modern myth-making.',author:'' , price: '$11.99', details: 'bookdetails.html?id=4' },
 ];
 
-
+function each(array, func) { 
+    for (var i = 0; i < array.length; i++) { 
+          func(array[i], i); 
+    } }
 
 // This is a function to display books list in the index page
 function displayBooks() {
     const bookList = document.getElementById('bookList');
     bookList.innerHTML = '';
 
-    books.forEach(function (book, index)  {
+    each(books, function (book, index) {
         // Creating Div element inside bookItem variable
         const bookItem = document.createElement('div');
         // Adding Style
