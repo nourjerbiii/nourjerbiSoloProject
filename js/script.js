@@ -83,8 +83,7 @@ function removeBook(index) {
 function displayPurchases() {
     const purchasesList = document.getElementById('purchasesList');
     purchasesList.innerHTML = '';
-
-    purchasedBooks.forEach((book, index) => {
+each(purchasedBooks,function(book, index) {
         const purchaseItem = document.createElement('li');
         purchaseItem.innerHTML = `<span>${book.title}</span> - <span>${book.price}</span> <button onclick="removeBook(${index})">Remove</button>`;
         purchasesList.appendChild(purchaseItem);
